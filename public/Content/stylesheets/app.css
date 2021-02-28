@@ -1,0 +1,43 @@
+/* File Name: app.css, Lisa Hayles Ottey-301162155 02/13/2021 */
+body {
+  padding: 50px;
+  font: 18px Arial;
+  text-align: center;
+}
+
+h1 {
+  margin-left: 40px;
+} 
+
+h3 {
+  background-color:lightblue;
+  font-weight: 600;
+}
+
+.jumbotron {
+  background: url('https://scontent.fyto1-2.fna.fbcdn.net/v/t1.0-9/73245960_10162292128400391_3482300389141774336_o.jpg?_nc_cat=101&ccb=3&_nc_sid=e3f864&_nc_ohc=euC4ULd_vBIAX-xQBty&_nc_ht=scontent.fyto1-2.fna&oh=05e0dd9910f2a4bf05498c1436754865&oe=604E015A') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  color:white;
+
+}
+
+label {
+  font: 16px Arial;
+  font-style: oblique;
+}
+/* Services sheet use s class */
+li.s {
+
+  text-align: left;
+  margin-left: 5%;
+  font-weight: 200;
+}
+
+ul.s {
+  text-align: left;
+  list-style-type: circle;
+}
+

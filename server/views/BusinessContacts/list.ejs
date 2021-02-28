@@ -1,0 +1,53 @@
+<%- include ../Partials/header.ejs %>
+
+<%- include ../Partials/main_nav.ejs %>
+
+
+<! -- Main content -->
+<main class = "container-fluid">
+    <div class="row">
+        <div class="offset-md-1 col-md-11">
+            <h1><%= title%></h1>
+            <a href="/bcontacts/add" class="btn btn-primary" role="button">
+            <i class="fas fa-plus-circle"></i>Add a Contact</a>
+            <br>
+            <table class = "table table-bordered table-striped table-hover">
+                <!--  Header Row -->
+                <thead class="thead-dark">
+                <tr class="d-flex">
+                    <th Class = "text-center col-3">Name</th>
+                    <th Class = "text-center col-2">Phone Number</th>
+                    <th Class = "text-center col-3">Email</th>
+                    <th Class = "text-center col-2"></th>
+                    <th Class = "text-center col-2"></th>
+                </tr>
+                </thead>    
+             
+                <!--  Repeatable Template row -->
+
+                 <% for(let count = 0; count < BusinessContacts.length; count++){ %>
+                <tr class="d-flex">
+                    <td class = "text-center col-3"><%= BusinessContacts[count].name %></td>
+                    <td class = "text-center col-2"><%= BusinessContacts[count].number %></td>
+                    <td class = "text-center col-3"><%= BusinessContacts[count].email %></td>
+                    <td Class = "text-center col-2">
+                        <a href="/bcontacts/edit/<%= BusinessContacts[count]._id %>" class="btn btn-primary btn-sm">
+                        <i class="fas fa-pencil-alt"></i>Edit</a>
+                    </td>
+                    <td Class = "text-center col-2">
+                        <a href="/bcontacts/delete/<%= BusinessContacts[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i>Delete</a>
+                    </td>
+                
+                </tr>
+                
+                <% } %>
+
+            </table>
+
+</main>
+
+<%- include ../Partials/bottom_nav.ejs%>
+ 
+<%- include ../Partials/footer.ejs%>
+

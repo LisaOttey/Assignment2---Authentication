@@ -1,0 +1,59 @@
+<%- include ../Partials/header.ejs %>
+
+<%- include ../Partials/main_nav.ejs %>
+
+<!-- Content fot the Add page-->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%=title%></h1>
+
+            <form class="form" method="POST">
+                <div class="form-proup">
+                    <label for="nameTextField">Name:</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="First Name Last Name"
+                    name="name" 
+                    value ="<%= bcontacts.name %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="numberTextfield">Phone Number:</label>
+                    <input type="number" class="form-control"
+                    id="numberTextfield"
+                    placeholder="Phone Number"
+                    name="number" 
+                    value ="<%= bcontacts.number %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emaiTextField">Email Address:</label>
+                    <input type="text" class="form-control"
+                    id="emailTextField"
+                    placeholder="example@email.com"
+                    name="email" 
+                    value ="<%= bcontacts.email %>"
+                    required>
+                </div>
+                
+                <!-- Submit and Cancel Buttons-->
+
+                    <button class="btn-primary" type="submit">
+                        <i class="fas fa-edit">Submit</i></button>
+
+                        <a href="/bcontacts" class="btn btn-warning">
+                            <i class="fas fa-undo"></i>Cancel</a>
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ../Partials/bottom_nav.ejs%>
+ 
+<%- include ../Partials/footer.ejs%>

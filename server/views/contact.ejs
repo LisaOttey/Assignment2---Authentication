@@ -1,0 +1,42 @@
+<!-- Contact Page -->
+
+<%- include Partials/header.ejs %>
+<%- include Partials/main_nav.ejs %>
+<%- include Partials/main_content.ejs %>
+
+<p>Send a message to inquire about services, if you have questions or comments.</p>
+<div class="container">
+<form>
+
+      
+    <div class="form-group">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="youremail@my.centennialcollege.ca">
+    </div>
+    <div class="form-group">
+        <label for="inputName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="inputName">
+      </div>
+
+
+    <div class="form-group">
+      <label for="inputSubject" class="form-label">Subject</label>
+      <input type="text" class="form-control" id="inputSubject">
+      <br>
+    </div>
+     
+    <div class="form-floating">
+      <label for="inputMessage" class="form-label">Message</label>
+      <textarea class="form-control" id="inputMessage" style="height: 100px" placeholder="Compose Message..."></textarea>
+     <br>
+    </div>
+   
+
+    <div class="form-group">  
+      <a href="/home" class="btn btn-primary">SUBMIT</a>
+    </div>
+  </form>
+</div>
+
+<%- include Partials/bottom_nav.ejs %>
+<%- include Partials/footer.ejs %>
