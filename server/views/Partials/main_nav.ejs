@@ -52,24 +52,28 @@
           </li>
 
 
-          <% if (title == "Login" ){%>
+          <% if (title == "Business Contacts List"){ %>
             <li class="nav-item active">
-          <% } else { %>
-            <li class="nav-item">
-          <% } %>
-            <a class="nav-link" aria-current="page" href="/login">Login</a>
+         <% } else {%>
+          <li class="nav-item ">
+           <% } %>
+            <a class="nav-link" href="/bcontacts" >Business Contact List </a>
           </li>
-
-          <% if (title == "Business Contacts List" ){%>
-            <li class="nav-item active">
-          <% } else { %>
+          
+          <% if(typeof displayName == 'string' && displayName) { %>
+            <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome,<%= displayName %></li>
             <li class="nav-item">
+              <a href="/logout" class="nav-link">
+                <i class="fas fa-lg fa-sign-out-alt"></i>Logout</a></li>
+        <%  }else{ %>
+            <li class="nav-item">
+              <a href="/login" class="nav-link">
+                <i class="fas fa-lg fa-sign-in-alt"></i>Login</a></li>
           <% } %>
-            <a class="nav-link" aria-current="page" href="/bcontacts">Contacts List</a>
-          </li>
+    
 
-        </ul>
-      </div>
-      </div>
-    </div>  
-  </nav>
+      </ul>
+    </div>
+  </div>
+
+</nav>
