@@ -17,7 +17,8 @@ module.exports.displayBContactsList = (req, res, next)=> {
         {
             //console.log(ContactsList);
         
-            res.render('BusinessContacts/list', {title: 'Business Contacts List', BusinessContacts: ContactsList});
+            res.render('BusinessContacts/list', {title: 'Business Contacts List', BusinessContacts: ContactsList
+            , displayName: req.user ? req.user.displayName : ''});
             
         }
   });
@@ -26,7 +27,8 @@ module.exports.displayBContactsList = (req, res, next)=> {
 
 /* display & process ADD PAGE */
 module.exports.displayBContactsAdd =  (req, res, next) => {
-    res.render('BusinessContacts/add', {title: 'Add Business Contact'})
+    res.render('BusinessContacts/add', {title: 'Add Business Contact'
+    , displayName: req.user ? req.user.displayName : ''});
 };
 
 module.exports.processBContactsAdd =  (req, res, next) => {
@@ -66,7 +68,8 @@ module.exports.displayBContactsEdit =(req, res, next) => {
         else
         {
             //show edit view
-            res.render('BusinessContacts/edit', {title:'Edit Contact', bcontacts:contactToEdit})
+            res.render('BusinessContacts/edit', {title:'Edit Contact', bcontacts:contactToEdit
+            , displayName: req.user ? req.user.displayName : ''});
         }
     });
 };

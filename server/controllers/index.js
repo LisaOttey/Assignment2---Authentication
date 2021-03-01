@@ -8,23 +8,23 @@ let userModel = require('../models/user');
 let User = userModel.User; //alias
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('home', {title:'Home', subtext:'Pleasure to virtually meet you!'});
+    res.render('home', {title:'Home', subtext:'Pleasure to virtually meet you!', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayAboutPage =  (req, res, next) => {
-    res.render('about',  { title: 'About Me', subtext: 'Pleasure to virtually meet you!'});
+    res.render('about',  { title: 'About Me', subtext: 'Pleasure to virtually meet you!', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayProjectsPage =  (req, res, next) => {
-    res.render('projects',  { title: 'Projects', subtext: 'Here is what I am busy working on!'});
+    res.render('projects',  { title: 'Projects', subtext: 'Here is what I am busy working on!', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayServicesPage =  (req, res, next) => {
-    res.render('services',  { title: 'Services', subtext: 'What can I provide to you!'});
+    res.render('services',  { title: 'Services', subtext: 'What can I provide to you!', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayContactPage =  (req, res, next) => {
-    res.render('contact',  { title: 'Contact', subtext: 'Want to get intouch!' });
+    res.render('contact',  { title: 'Contact', subtext: 'Want to get intouch!' , displayName: req.user ? req.user.displayName : ''});
 }
 
 
